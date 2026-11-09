@@ -197,25 +197,26 @@ a {
 /* =====================================================
    HERO (big picture on the home page)
    ===================================================== */
+
 .hero {
     position: relative;
-    min-height: 62vh;           /* 62% of screen height */
+    min-height: 100vh;  /* Full screen height */
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(#4f9de0, #cfe8fb);  /* sky colour if no image */
+    background: linear-gradient(#4f9de0, #cfe8fb);
 }
 
 /* Photo fills the whole hero */
 .hero img {
     position: absolute;
-    inset: 0;                   /* top, right, bottom, left = 0 */
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;          /* crop to fit, no stretching */
+    object-fit: cover;
 }
 
-/* Dark blue shade on the left so text is easy to read */
+/* Dark blue shade on the left */
 .hero::after {
     content: "";
     position: absolute;

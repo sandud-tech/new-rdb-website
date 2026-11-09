@@ -1,99 +1,328 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>RDB-PIFS | Home</title>
+
+    <!-- Existing main CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- New Home page CSS -->
+    <link rel="stylesheet" href="css/home.css">
+
     <script src="js/main.js" defer></script>
 </head>
-<body>
+
+<body class="home-page">
+
+<!-- ================= HEADER ================= -->
 <header class="site-header">
+
     <a class="brand" href="index.html">
-        <img class="brand-logo" src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="Rural Development Bureau logo">
-        <span>Rural Development Bureau</span>
+        <img class="brand-logo"
+             src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg"
+             alt="Rural Development Bureau Logo">
+
+        <span class="brand-divider"></span>
+
+        <span class="brand-text">
+            <strong>Rural Development Bureau</strong>
+            <small>Ministry of Rural Development</small>
+        </span>
     </a>
-    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+
+    <button class="nav-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false">
+        &#9776;
+    </button>
+
     <nav class="site-nav" id="siteNav">
+
         <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="all-projects.html">Projects</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="login.html" class="btn-login" id="loginLink">Login</a>
+
+        <div class="nav-dropdown">
+            <a href="about.html">About Us <span>⌄</span></a>
+            <div class="nav-dropdown-content">
+                <a href="about.html#overview">Vision & Mission</a>
+                <a href="about.html#officers">Officer's Details</a>
+                <a href="about.html#rti">Right to Information Officers</a>
+            </div>
+        </div>
+
+        <div class="nav-dropdown">
+            <a href="all-projects.html">Projects <span>⌄</span></a>
+            <div class="nav-dropdown-content">
+                <a href="all-projects.html">All Projects</a>
+                <a href="add-project.html">Add Project</a>
+            </div>
+        </div>
+
+        <div class="nav-dropdown">
+            <a href="dashboard.html">Reports <span>⌄</span></a>
+            <div class="nav-dropdown-content">
+                <a href="dashboard.html">Project Dashboard</a>
+                <a href="dashboard.html">Project Reports</a>
+            </div>
+        </div>
+
+        <a href="about.html#rti">Contact Us</a>
+
+        <a href="login.html" class="btn-login" id="loginLink">
+            <span>♟</span> Login
+        </a>
+
     </nav>
 </header>
 
+
 <main>
-    <section class="hero">
-        <!-- PHOTO: change images/hero.svg to your own photo, e.g. images/hero.jpg -->
-        <img src="images/image.png" alt="Sigiriya rock rising above the forest">
-        <div class="hero-text">
-            <h1>Welcome to Rural Development Bureau</h1>
-            <p>Record, track and report rural development projects across every district.</p>
-            <a class="btn btn-mint" href="login.html">Sign in to the system</a>
+
+    <!-- ================= HERO BANNER ================= -->
+    <section class="home-hero">
+
+        <img src="images/image.png"
+             alt="Rural landscape of Sri Lanka"
+             class="hero-background">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>
+                <span>Welcome to</span>
+                Rural Development Bureau
+            </h1>
+
+            <div class="hero-line"></div>
+
+            <p>
+                Together for a Prosperous and Sustainable Rural Sri Lanka
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="all-projects.html" class="btn-explore">
+                    <span>❯</span> Explore Projects
+                </a>
+
+                <a href="dashboard.html" class="btn-reports">
+                    <span>▥</span> View Reports
+                </a>
+
+            </div>
         </div>
+
+        <div class="hero-indicators">
+            <span class="selected"></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="hero-green-shape"></div>
+
     </section>
 
-    <section class="quick-links">
-        <a class="tile" href="dashboard.html">
-            <h2>Dashboard</h2>
-            <p>Totals, project progress graphs and the full project table.</p>
-        </a>
-        <a class="tile" href="add-project.html">
-            <h2>Add a project</h2>
-            <p>Enter a new project with approvals, costs and beneficiaries.</p>
-        </a>
-        <a class="tile" href="all-projects.html">
-            <h2>All projects</h2>
-            <p>Search, filter and export saved project records.</p>
-        </a>
+
+    <!-- ================= STATISTICS ================= -->
+    <section class="statistics-section">
+
+        <div class="statistics-container">
+
+            <div class="stat-item">
+                <span class="stat-icon">📍</span>
+                <div>
+                    <h2>25</h2>
+                    <p>Districts</p>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-icon">💼</span>
+                <div>
+                    <h2>15,000+</h2>
+                    <p>Projects</p>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-icon">▤</span>
+                <div>
+                    <h2>Rs. 25 Billion</h2>
+                    <p>Total Allocation</p>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-icon">👥</span>
+                <div>
+                    <h2>Rural Community</h2>
+                    <p>Our Priority</p>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <span class="stat-icon sustainable-icon">🌱</span>
+                <div>
+                    <h2>Sustainable</h2>
+                    <p>Development</p>
+                </div>
+            </div>
+
+        </div>
+
     </section>
+
+
+    <!-- ================= ABOUT + LATEST PROJECTS ================= -->
+    <section class="home-information">
+
+        <!-- About Bureau -->
+        <div class="home-about">
+
+            <img src="images/rural road.jpg"
+                 alt="Beautiful rural road in Sri Lanka">
+
+            <div class="about-content">
+
+                <div class="about-heading-line"></div>
+
+                <h2>About the Bureau</h2>
+
+                <p>
+                    The Rural Development Bureau is committed to
+                    promote balanced and sustainable development
+                    in rural areas through effective project
+                    management, monitoring and support for rural
+                    communities across Sri Lanka.
+                </p>
+
+                <a href="about.html" class="learn-more">
+                    Learn More <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Latest Projects -->
+        <div class="latest-projects">
+
+            <div class="projects-heading">
+
+                <h2>
+                    <span>▤</span> Latest Projects
+                </h2>
+
+                <a href="all-projects.html">
+                    View All →
+                </a>
+
+            </div>
+
+            <div class="project-list">
+
+                <div class="project-item">
+
+                    <img src="images/project1.jpg" alt="Canal project">
+
+                    <div class="project-info">
+                        <h3>Mahakanadrawa Canal Improvement Project</h3>
+                        <p>Monaragala District</p>
+                    </div>
+
+                    <span class="status ongoing">Ongoing</span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <img src="images/project2.jpg" alt="Road development">
+
+                    <div class="project-info">
+                        <h3>Atabage – Pussellawa Road Development</h3>
+                        <p>Kandy District</p>
+                    </div>
+
+                    <span class="status progress">In Progress</span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <img src="images/project3.jpg" alt="Water supply project">
+
+                    <div class="project-info">
+                        <h3>Handapanagala Water Supply Project</h3>
+                        <p>Badulla District</p>
+                    </div>
+
+                    <span class="status pending">Pending</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
 </main>
-<section class="related">
-        <h2 class="section-title">Related Organizations</h2>
-        <div class="org-grid">
-        <div class="org"><img src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="" width="64" height="64"><p>Ministry of Rural Development, Social Security and Community Empowerment</p></div>
-        <div class="org"><img src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="" width="64" height="64"><p>Department of Samurdhi Development</p></div>
-        <div class="org"><img src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="" width="64" height="64"><p>Rural Development and Research Institute</p></div>
-        <div class="org"><img src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="" width="64" height="64"><p>Ministry of Public Administration</p></div>
-        <div class="org"><img src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="" width="64" height="64"><p>Ministry of Home Affairs</p></div>
-        <div class="org"><img src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="" width="64" height="64"><p>Ministry of Finance</p></div>
-        <div class="org"><img src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="" width="64" height="64"><p>Export Development Board</p></div>
-        <div class="org"><img src="https://rdb.gov.lk/static/media/logo.060498f8276ee7cfda0d.jpeg" alt="" width="64" height="64"><p>National Secretariat for Community Empowerment</p></div>
-        </div>
-    </section>
 
+
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
+
     <div class="footer-grid">
+
         <div>
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="all-projects.html">Projects</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="dashboard.html">Reports</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </div>
+
         <div>
             <h3>Important Links</h3>
             <ul>
-                <li><a href="https://rdb.gov.lk" target="_blank" rel="noopener">Rural Development Bureau website</a></li>
-                <li><a href="https://www.gov.lk" target="_blank" rel="noopener">Sri Lanka Government portal</a></li>
-                <li><a href="about.html#rti">Right to Information officers</a></li>
+                <li><a href="https://rdb.gov.lk" target="_blank" rel="noopener">Rural Development Bureau</a></li>
+                <li><a href="https://www.gov.lk" target="_blank" rel="noopener">Sri Lanka Government Portal</a></li>
+                <li><a href="about.html#rti">Right to Information Officers</a></li>
             </ul>
         </div>
+
         <div>
             <h3>Contact Information</h3>
             <address>
                 Rural Development Bureau,<br>
                 9th Floor, Sethsiripaya Stage II<br>
                 Tel: +94 112887831<br>
-                Email: <a href="mailto:dir.rdb.mrsc@sltnet.lk">dir.rdb.mrsc@sltnet.lk</a>
+                Email:
+                <a href="mailto:dir.rdb.mrsc@sltnet.lk">
+                    dir.rdb.mrsc@sltnet.lk
+                </a>
             </address>
         </div>
+
     </div>
-    <p class="footer-bottom">&copy; <span id="year"></span> Rural Development Bureau. All rights reserved.</p>
+
+    <p class="footer-bottom">
+        &copy; <span id="year"></span>
+        Rural Development Bureau. All rights reserved.
+    </p>
+
 </footer>
+
 </body>
 </html>

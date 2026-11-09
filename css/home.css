@@ -1,0 +1,822 @@
+
+/* =========================================
+   RDB-PIFS HOME PAGE DESIGN
+   Navy Blue, White and Gold Theme
+========================================= */
+
+.home-page {
+    background: #f4f7fb;
+    color: #10213a;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.home-page main {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* =========================================
+   1. HEADER
+========================================= */
+
+.home-page .site-header {
+    min-height: 58px;
+    padding: 5px 4%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #062653;
+    color: white;
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
+
+.home-page .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    min-width: 340px;
+}
+
+.home-page .brand-logo {
+    width: 47px;
+    height: 51px;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+
+.brand-divider {
+    height: 38px;
+    width: 2px;
+    background: #ffffffaa;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+}
+
+.brand-text strong {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.brand-text small {
+    font-size: 12px;
+    color: #e1e8f5;
+}
+
+.home-page .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-wrap: nowrap;
+}
+
+.home-page .site-nav > a,
+.home-page .nav-dropdown > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 14px;
+    border-radius: 9px;
+    white-space: nowrap;
+}
+
+.home-page .site-nav > a:hover,
+.home-page .nav-dropdown > a:hover {
+    background: #ffffff20;
+}
+
+.home-page .site-nav > a.active {
+    background: white;
+    color: #062653;
+}
+
+.home-page .nav-dropdown {
+    position: relative;
+}
+
+.home-page .nav-dropdown > a span {
+    margin-left: 4px;
+}
+
+.home-page .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    background: white;
+    border-radius: 7px;
+    box-shadow: 0 6px 18px #0003;
+    overflow: hidden;
+    z-index: 200;
+}
+
+.home-page .nav-dropdown:hover .nav-dropdown-content,
+.home-page .nav-dropdown:focus-within .nav-dropdown-content {
+    display: block;
+}
+
+.home-page .nav-dropdown-content a {
+    display: block;
+    padding: 11px 15px;
+    color: #062653;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.home-page .nav-dropdown-content a:hover {
+    background: #edf2f8;
+}
+
+.home-page .site-nav .btn-login {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 9px;
+    margin-left: 5px;
+}
+
+.home-page .site-nav .btn-login:hover {
+    background: white;
+    color: #062653;
+}
+
+.home-page .nav-toggle {
+    display: none;
+}
+
+
+/* =========================================
+   2. HERO BANNER
+========================================= */
+
+.home-hero {
+    height: 256px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #163b63;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 28, 67, 0.92) 0%,
+        rgba(2, 35, 76, 0.72) 35%,
+        rgba(2, 35, 76, 0.10) 75%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 15px 5.7%;
+    max-width: 850px;
+    color: white;
+}
+
+.home-hero h1 {
+    font-size: clamp(28px, 4vw, 43px);
+    font-weight: 750;
+    line-height: 1.05;
+    margin: 0;
+    color: white;
+    letter-spacing: -0.5px;
+    text-transform: none;
+    text-shadow: none;
+}
+
+.home-hero h1 span {
+    display: block;
+    font-weight: 300;
+}
+
+.hero-line {
+    width: 110px;
+    height: 4px;
+    border-radius: 4px;
+    background: #ffbd00;
+    margin: 10px 0 8px;
+}
+
+.home-hero .hero-content p {
+    font-size: 17px;
+    font-style: italic;
+    margin: 0 0 12px;
+    color: white;
+    text-shadow: none;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.btn-explore,
+.btn-reports {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 18px;
+    border-radius: 11px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.btn-explore {
+    background: #ffb900;
+    color: #08264b;
+}
+
+.btn-explore:hover {
+    background: #ffd04b;
+    transform: translateY(-2px);
+}
+
+.btn-reports {
+    color: white;
+    border: 2px solid white;
+    background: #05234a66;
+}
+
+.btn-reports:hover {
+    background: white;
+    color: #062653;
+}
+
+.hero-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 9px;
+    z-index: 3;
+}
+
+.hero-indicators span {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+}
+
+.hero-indicators span.selected {
+    background: #ffbd00;
+}
+
+.hero-green-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 155px;
+    height: 60px;
+    background: #86bd36;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   3. STATISTICS BAR
+========================================= */
+
+.statistics-section {
+    padding: 15px 3% 9px;
+    background: #f4f7fb;
+}
+
+.statistics-container {
+    max-width: 1400px;
+    min-height: 62px;
+    margin: 0 auto;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+    border: 1px solid #e8eef6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #10213a15;
+}
+
+.stat-item {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 7px 10px;
+    border-right: 1px solid #d7e0ec;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-icon {
+    font-size: 29px;
+    flex-shrink: 0;
+    color: #092c5d;
+}
+
+.stat-item h2 {
+    font-size: 18px;
+    font-weight: 750;
+    margin: 0;
+    color: #092c5d;
+    line-height: 1.3;
+}
+
+.stat-item p {
+    font-size: 12px;
+    margin: 0;
+    color: #102d59;
+    line-height: 1.4;
+}
+
+.sustainable-icon {
+    color: #07834b;
+}
+
+
+/* =========================================
+   4. ABOUT + LATEST PROJECTS
+========================================= */
+
+.home-information {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 9px 3% 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* About section */
+
+.home-about {
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+    gap: 20px;
+    align-items: center;
+    min-width: 0;
+}
+
+.home-about > img {
+    width: 100%;
+    height: 154px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px #0002;
+}
+
+.about-content {
+    min-width: 0;
+}
+
+.about-heading-line {
+    width: 52px;
+    height: 3px;
+    background: #168044;
+    margin-bottom: 8px;
+}
+
+.about-content h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    color: #092c5d;
+    margin: 0 0 8px;
+}
+
+.about-content p {
+    font-size: 12px;
+    line-height: 1.45;
+    margin: 0 0 8px;
+    color: #17243a;
+}
+
+.learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 14px;
+    background: #082c5d;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.learn-more:hover {
+    background: #174d88;
+}
+
+
+/* Latest projects */
+
+.latest-projects {
+    min-width: 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #dce5f0;
+    box-shadow: 0 3px 9px #10213a15;
+}
+
+.projects-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #062653;
+    color: white;
+    padding: 9px 14px;
+}
+
+.projects-heading h2 {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+.projects-heading h2 span {
+    font-size: 21px;
+    margin-right: 8px;
+}
+
+.projects-heading > a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.projects-heading > a:hover {
+    text-decoration: underline;
+}
+
+.project-list {
+    padding: 3px 12px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 39px;
+    padding: 5px 0;
+    border-bottom: 1px solid #e4eaf2;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-item img {
+    width: 57px;
+    height: 29px;
+    border-radius: 5px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.project-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-info h3 {
+    font-size: 10px;
+    font-weight: 700;
+    color: #092c5d;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.project-info p {
+    font-size: 10px;
+    color: #5c6676;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.status {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.ongoing {
+    background: #78df91;
+    color: #075b27;
+}
+
+.progress {
+    background: #9acaff;
+    color: #06427c;
+}
+
+.pending {
+    background: #ffd098;
+    color: #75420b;
+}
+
+
+/* =========================================
+   5. FOOTER
+========================================= */
+
+.home-page .site-footer {
+    background: #062653;
+    color: white;
+    padding: 30px 5% 0;
+}
+
+.home-page .site-footer h3 {
+    color: white;
+}
+
+.home-page .site-footer a {
+    color: #dce8f7;
+}
+
+.home-page .site-footer a:hover {
+    color: white;
+}
+
+.home-page .footer-bottom {
+    margin-top: 25px;
+    color: #dce8f7;
+}
+
+
+/* =========================================
+   6. TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .home-page .site-header {
+        padding-left: 2%;
+        padding-right: 2%;
+        gap: 10px;
+    }
+
+    .home-page .brand {
+        min-width: 280px;
+    }
+
+    .home-page .site-nav {
+        gap: 2px;
+    }
+
+    .home-page .site-nav > a,
+    .home-page .nav-dropdown > a {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .home-information {
+        grid-template-columns: 1fr;
+    }
+
+    .home-about > img {
+        height: 180px;
+    }
+}
+
+
+/* =========================================
+   7. MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 760px) {
+
+    .home-page .site-header {
+        flex-wrap: wrap;
+        padding: 7px 4%;
+    }
+
+    .home-page .brand {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .home-page .brand-logo {
+        width: 42px;
+        height: 44px;
+    }
+
+    .brand-text strong {
+        font-size: 14px;
+    }
+
+    .brand-text small {
+        font-size: 10px;
+    }
+
+    .home-page .nav-toggle {
+        display: block;
+        margin-left: auto;
+        color: white;
+        background: transparent;
+        border: 1px solid #ffffff88;
+        border-radius: 6px;
+        padding: 5px 12px;
+        font-size: 20px;
+    }
+
+    .home-page .site-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        margin-left: 0;
+    }
+
+    .home-page .site-nav.open {
+        display: flex;
+    }
+
+    .home-page .site-nav > a,
+    .home-page .nav-dropdown > a {
+        width: 100%;
+        padding: 11px 14px;
+    }
+
+    .home-page .nav-dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background: #f0f4f9;
+    }
+
+    .home-page .nav-dropdown-content a {
+        padding-left: 30px;
+    }
+
+    .home-page .site-nav .btn-login {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .home-hero {
+        height: 280px;
+    }
+
+    .hero-content {
+        padding: 15px 5%;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(27px, 7vw, 36px);
+    }
+
+    .home-hero .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .btn-explore,
+    .btn-reports {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .statistics-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 5px;
+    }
+
+    .stat-item {
+        justify-content: flex-start;
+        padding: 12px 8px;
+        border-right: none;
+        border-bottom: 1px solid #e0e7f0;
+    }
+
+    .stat-item:nth-child(odd) {
+        border-right: 1px solid #e0e7f0;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-icon {
+        font-size: 23px;
+    }
+
+    .stat-item h2 {
+        font-size: 14px;
+    }
+
+    .stat-item p {
+        font-size: 11px;
+    }
+
+    .home-information {
+        padding: 12px 4% 25px;
+        gap: 18px;
+    }
+
+    .home-about {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .home-about > img {
+        height: 190px;
+    }
+
+    .about-content h2 {
+        font-size: 21px;
+    }
+
+    .about-content p {
+        font-size: 13px;
+    }
+
+    .project-item img {
+        width: 52px;
+    }
+
+    .project-info h3 {
+        font-size: 10px;
+    }
+
+    .status {
+        font-size: 8px;
+        padding: 4px 7px;
+    }
+}
+
+
+/* Small mobile screens */
+
+@media (max-width: 380px) {
+
+    .brand-text strong {
+        font-size: 12px;
+    }
+
+    .home-hero h1 {
+        font-size: 26px;
+    }
+
+    .statistics-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item,
+    .stat-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .project-item {
+        gap: 6px;
+    }
+}

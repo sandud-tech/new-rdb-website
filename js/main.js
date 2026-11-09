@@ -1,21 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const year = document.getElementById("year");
-    if (year) year.textContent = new Date().getFullYear();
 
-    // Mobile menu
-    const toggle = document.querySelector(".nav-toggle");
-    const nav = document.getElementById("siteNav");
-    if (toggle && nav) {
-        toggle.addEventListener("click", () => {
-            const open = nav.classList.toggle("open");
-            toggle.setAttribute("aria-expanded", open);
-        });
-    }
+// Mobile navigation
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector("#siteNav");
 
-    // Login button becomes "Dashboard" after signing in
-    const loginLink = document.getElementById("loginLink");
-    if (loginLink && sessionStorage.getItem("rdbLoggedIn") === "yes") {
-        loginLink.textContent = "Dashboard";
-        loginLink.href = "dashboard.html";
-    }
-});
+if (navToggle && siteNav) {
+    navToggle.addEventListener("click", function () {
+
+        siteNav.classList.toggle("open");
+
+        const isOpen = siteNav.classList.contains("open");
+
+        navToggle.setAttribute("aria-expanded", isOpen);
+
+    });
+}
+
+// Automatic footer year
+const yearElement = document.querySelector("#year");
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
